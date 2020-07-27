@@ -882,10 +882,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 906412242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c90edbb1600847f58bd0a540f05632e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7065fd450cab542169ad3d9fd2ac22b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 1036010364}
+  notes:
+  - {fileID: 1380960262}
+  - {fileID: 1901311299}
+  - {fileID: 1036010364}
+  - {fileID: 746344863}
+  - {fileID: 1410776041}
+  - {fileID: 1002403294}
+  - {fileID: 1636372705}
+  - {fileID: 2021557136}
 --- !u!114 &906412245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,18 +936,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 906412246}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 906412244}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &906412246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2213,7 +2210,6 @@ GameObject:
   - component: {fileID: 1890808181}
   - component: {fileID: 1890808183}
   - component: {fileID: 1890808182}
-  - component: {fileID: 1890808184}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2281,27 +2277,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890808180}
   m_CullTransparentMesh: 0
---- !u!114 &1890808184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890808180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7065fd450cab542169ad3d9fd2ac22b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  notes:
-  - {fileID: 1380960262}
-  - {fileID: 1901311299}
-  - {fileID: 1036010364}
-  - {fileID: 746344863}
-  - {fileID: 1410776041}
-  - {fileID: 1002403294}
-  - {fileID: 1636372705}
-  - {fileID: 2021557136}
 --- !u!1 &1901311298
 GameObject:
   m_ObjectHideFlags: 0
