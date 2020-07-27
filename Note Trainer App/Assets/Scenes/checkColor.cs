@@ -39,15 +39,17 @@ public class checkColor : MonoBehaviour
 
                 if (note == i)
                 {
-                    notesText[i].color = GREY;
+                    
                     Debug.Log("Correct");
-                    break;
+                    
                 }
                 else
                 {
                     Debug.Log("Incorrect");
                 }
-                
+                notesText[i].color = GREY;
+                break;
+
 
             }
          

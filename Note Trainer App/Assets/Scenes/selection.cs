@@ -19,7 +19,18 @@ public class selection : MonoBehaviour, IPointerClickHandler // 2
 
     public void OnPointerClick(PointerEventData eventData) // 3
     {
-        
+        if(this.GetComponent<Text>().color == GREY)
+        {
+            selected = false;
+        }
+        else
+        {
+            selected = true;
+        }
+        GameObject bg = GameObject.Find("background");
+        Deselection deselection = bg.GetComponent<Deselection>();
+
+        deselection.deselectAll();
 
         sound.Play();
         if (selected)
