@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class replayNote : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnMouseDown()
     {
-        
+        GameObject generateButton = GameObject.Find("Generate_Button");
+        GenerateSound gensound = generateButton.GetComponent<GenerateSound>();
+
+        gensound.playSound(gensound.random_note);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

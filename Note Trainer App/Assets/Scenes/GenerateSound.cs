@@ -20,12 +20,12 @@ public class GenerateSound : MonoBehaviour
         Debug.Log("starting");
         random_note = 0;
 
-        button.onClick.AddListener(() => playSound());
+        button.onClick.AddListener(() => playSound((int)Random.Range(0, 8)));
     }
 
-    void playSound()
+    public void playSound(int rand_note)
     {
-        random_note = (int)Random.Range(0, 8);
+        random_note = rand_note;
         notes[random_note].Play();
     }
     /*
