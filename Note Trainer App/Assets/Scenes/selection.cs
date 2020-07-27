@@ -9,7 +9,7 @@ public class selection : MonoBehaviour, IPointerClickHandler // 2
 // ... And many more available!
 {
     public AudioSource C4Audio;
-    private bool selected = false;
+    private bool selected = false; 
 
 
     public void OnPointerClick(PointerEventData eventData) // 3
