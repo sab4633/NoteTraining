@@ -13,27 +13,42 @@ public class checkColor : MonoBehaviour
 
     private Color GREY = new Color(0.1960784f, 0.1960784f, 0.1960784f);
 
-    public Text cText;
+    public Text[] notesText;
 
     private Button button { get { return GetComponent<Button>(); } }
 
     void Start()
     {
+        
 
-        button.onClick.AddListener(() => checkSelection());
+        button.onClick.AddListener(()=> checkSelection());
 
     }
 
     // Update is called once per frame
     void checkSelection()
     {
-        if(cText.color == GREY)
+        GameObject generateButton = GameObject.Find("Generate_Button");
+        GenerateSound gensound = generateButton.GetComponent<GenerateSound>();
+        for (int i = 0; i < notesText.Length; i++)
+        
         {
-            Debug.Log("tis grey");
+            if (notesText[i].color == Color.red)
+            {
+                int note = gensound.random_note;
+                if (note == i)
+                {
+                    Debug.Log("Correct");
+                }
+                else
+                {
+                    Debug.Log("Incorrect");
+                }
+                break;
+
+            }
+         
         }
-        else
-        {
-            Debug.Log("tis not grey!");
-        }
+        
     }
 }

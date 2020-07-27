@@ -8,23 +8,23 @@ public class selection : MonoBehaviour, IPointerClickHandler // 2
   
 // ... And many more available!
 {
-    public AudioSource audio;
+    public AudioSource sound;
     private bool selected = false;
-    private Color grey;
+    private  Color GREY;
 
     void Start()
     {
-        grey = new Color(0.1960784f, 0.1960784f, 0.1960784f);
+        GREY = new Color(0.1960784f, 0.1960784f, 0.1960784f);
     }
 
     public void OnPointerClick(PointerEventData eventData) // 3
     {
         
 
-        audio.Play();
+        sound.Play();
         if (selected)
         {
-            this.GetComponent<Text>().color = grey;
+            this.GetComponent<Text>().color = GREY;
         }
         else
         {

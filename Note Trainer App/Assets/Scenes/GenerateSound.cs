@@ -9,7 +9,7 @@ public class GenerateSound : MonoBehaviour
 {
     //public int elements;
     public AudioSource[] notes;
-    private int random_note;
+    public int random_note;
 
     private Button button { get { return GetComponent<Button>(); } }
 
