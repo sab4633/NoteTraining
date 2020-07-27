@@ -36,15 +36,18 @@ public class checkColor : MonoBehaviour
             if (notesText[i].color == Color.red)
             {
                 int note = gensound.random_note;
+
                 if (note == i)
                 {
+                    notesText[i].color = GREY;
                     Debug.Log("Correct");
+                    break;
                 }
                 else
                 {
                     Debug.Log("Incorrect");
                 }
-                break;
+                
 
             }
          
