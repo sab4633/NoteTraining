@@ -12,10 +12,13 @@ public class checkColor : MonoBehaviour
 {
 
     private Color GREY = new Color(0.1960784f, 0.1960784f, 0.1960784f);
+    private Color darkgreen = new Color(0.09019607f, 0.4056604f, 0.07462621f);
 
     public Text[] notesText;
 
     private Button button { get { return GetComponent<Button>(); } }
+
+    public Text results_text;
 
     void Start()
     {
@@ -39,12 +42,15 @@ public class checkColor : MonoBehaviour
 
                 if (note == i)
                 {
-                    
+                    results_text.text = "CORRECT";
+                    results_text.color = darkgreen;
                     Debug.Log("Correct");
                     
                 }
                 else
                 {
+                    results_text.text = "INCORRECT";
+                    results_text.color = Color.red;
                     Debug.Log("Incorrect");
                 }
                 notesText[i].color = GREY;
