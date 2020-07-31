@@ -20,6 +20,9 @@ public class checkColor : MonoBehaviour
 
     public Text results_text;
 
+    public AudioSource success;
+    public AudioSource failure;
+
     void Start()
     {
         
@@ -44,6 +47,7 @@ public class checkColor : MonoBehaviour
                 {
                     results_text.text = "CORRECT";
                     results_text.color = darkgreen;
+                    success.Play();
                     Debug.Log("Correct");
                     
                 }
@@ -52,6 +56,7 @@ public class checkColor : MonoBehaviour
                     results_text.text = "INCORRECT";
                     results_text.color = Color.red;
                     Debug.Log("Incorrect");
+                    failure.Play();
                 }
                 notesText[i].color = GREY;
                 break;
